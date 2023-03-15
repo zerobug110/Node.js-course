@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/zerobug110/Node.js-course/issues"
   },
-  "homepage": "https://github.com/zerobug110/Node.js-course#readme"
+  "homepage": "https://github.com/zerobug110/Node.js-course#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
