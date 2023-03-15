@@ -1,0 +1,22 @@
+{
+  "name": "natour",
+  "version": "1.0.0",
+  "description": "learning node, express and mangodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zerobug110/Node.js-course.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "muhammed bojang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zerobug110/Node.js-course/issues"
+  },
+  "homepage": "https://github.com/zerobug110/Node.js-course#readme"
+}
