@@ -1,3 +1,4 @@
+const fs = require('fs');
 const express = require('express');
 
 const app = express();
@@ -9,7 +10,7 @@ const app = express();
 // app.post('/post', (req, res) => {
 //     res.status(200).send('you can send post to this endpoin')
 // })
-
+const tours = JSON.parse( fs.readFileSync(`${__dirname}/dev-data/data/tours-sample.json`))
 app.get('/api/v1/tours', (req, res) => {
     res
     .status(200).send('message from the API');
