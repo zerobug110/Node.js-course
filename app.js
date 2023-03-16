@@ -10,10 +10,18 @@ const app = express();
 // app.post('/post', (req, res) => {
 //     res.status(200).send('you can send post to this endpoin')
 // })
-const tours = JSON.parse( fs.readFileSync(`${__dirname}/dev-data/data/tours-sample.json`))
+const tours = JSON.parse(
+    fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
+)
+
 app.get('/api/v1/tours', (req, res) => {
     res
-    .status(200).send('message from the API');
+    .status(200).json({
+        status: 'success',
+        data: {
+            tours
+        }
+    });
 })
 
 const port = 3000
