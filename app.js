@@ -3,16 +3,16 @@ const express = require('express');
 
 const app = express();
 
-// app.get('/', (req, res)=>{
-// res.status(200).json({ message: 'hello from the server side', app: 'natour'})
-// })
+app.use(express.json())
 
-// app.post('/post', (req, res) => {
-//     res.status(200).send('you can send post to this endpoin')
-// })
+
 const tours = JSON.parse(
     fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
 )
+
+app.post('/api/v1/tours', (req, res) => {
+    console.log(req.body)
+})
 
 app.get('/api/v1/tours', (req, res) => {
     res
