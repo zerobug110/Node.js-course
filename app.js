@@ -12,6 +12,7 @@ const tours = JSON.parse(
 
 app.post('/api/v1/tours', (req, res) => {
     console.log(req.body)
+    res.send('done')
 })
 
 app.get('/api/v1/tours', (req, res) => {
