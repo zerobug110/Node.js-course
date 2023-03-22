@@ -48,8 +48,6 @@ app.get('/api/v1/tours/:id', (req, res) => {
             message: 'Invalid ID'
         })
     }
-
-
     res.status(200).json({
         status: 'success',
         data: {
@@ -66,7 +64,6 @@ app.patch('/api/v1/tours/', (req, res) => {
             message: 'Invalid'
         })
     }
-
     res.status(200).json({
         status: 'success'
     });
@@ -79,7 +76,6 @@ app.delete('/api/v1/tours', (req, res) => {
             message: 'Invalid'
         })
     }
-
     res.status(200).json({
         status: 'success'
     });
