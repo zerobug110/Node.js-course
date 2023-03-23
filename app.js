@@ -5,10 +5,16 @@ const app = express();
 
 app.use(express.json())
 
+app.use((req, res, next) => {
+    console.log('hello from the middlleware');
+    next()
+})
+
 
 const tours = JSON.parse(
     fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
 )
+
 
 app.post('/api/v1/tours', (req, res) => {
     // console.log(req.body)
@@ -84,4 +90,4 @@ app.delete('/api/v1/tours', (req, res) => {
 const port = 3000
 app.listen(port, ()=>{
     console.log(`app runing on port ${port}...`)
-})
+})  
