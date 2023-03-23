@@ -10,6 +10,11 @@ app.use((req, res, next) => {
     next()
 })
 
+app.userr ((req, res, next) => {
+    req.requestTime = new Date().ttosISOString;
+    next();
+})
+
 
 const tours = JSON.parse(
     fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
