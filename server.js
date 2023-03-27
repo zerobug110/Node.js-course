@@ -1,1 +1,5 @@
-console.log("hello from the server")
+const express = require('express');
+
+const app = express();
+
+app.listen(5000,()=> console.log('hello from the sever'));
