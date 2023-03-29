@@ -5,9 +5,9 @@ const registerUser = (req, res) => {
     res.status(200).send("Regerter Route");
 }
 
-//@desc login  user
-//@route /api/users
-//@access public
+//@desc Login  user
+//@route /api/users/login
+//@access Public
 const loginUser = (req, res) => {
     res.statis(200).send("Login Route")
 }
@@ -16,4 +16,4 @@ const loginUser = (req, res) => {
 module.exports = {
     registerUser,
     loginUser
-}
+} 
