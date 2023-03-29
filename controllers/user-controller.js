@@ -8,9 +8,10 @@ const registerUser = (req, res) => {
 
     //validation
     if(!name || !email || !password) {
-
-        res.status(400).json({message: "please include all fields"})
+       throw new Error("Please include all fields")
     }
+
+    res.send("Register Rout")
 
 }
 
@@ -18,7 +19,7 @@ const registerUser = (req, res) => {
 //@route /api/users/login
 //@access Public
 const loginUser = (req, res) => {
-    res.statis(200).send("Login Route")
+    // res.statis(200).send("Login Route")
 }
 
 
