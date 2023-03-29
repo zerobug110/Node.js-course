@@ -3,6 +3,15 @@
 //@access public
 const registerUser = (req, res) => {
     res.status(200).send("Regerter Route");
+    const {name, email, password } = req.body
+
+
+    //validation
+    if(!name || !email || !password) {
+
+        res.status(400).json({message: "please include all fields"})
+    }
+
 }
 
 //@desc Login  user
